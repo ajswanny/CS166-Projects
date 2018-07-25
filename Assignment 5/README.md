@@ -1,2 +1,2 @@
 # Assignment 5
-A simple Python login interface was created.
+A simple Python login interface.
