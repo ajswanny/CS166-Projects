@@ -1,0 +1,25 @@
+Alexander Swanson
+CS 166 - Cybersecurity Principles
+Professor James Eddy
+Assignment 7
+November 13, 2017
+
+A note to the grader:
+    - Specific requirements for this particular assignment are identified with multi-line comments
+    throughout the Python script files (""" """). In order to test the program, run "main.py" which
+    will generate the intranet GUI, and you will be able to log in with the three default users
+    declared in "login_intranet.py" or create a new user with a default access level "C".
+
+This project implements the following conventions:
+    - Classes follow common naming conventions.
+    - Methods and variables are names using snake-case, fully lowercase.
+
+Moreover, the 'intranet__user' file defines the 'User' class which contains the algorithm for
+password encryption. Using an SHA-512 algorithm, a user's password is encrypted. This hash is
+compared to the hash for the plaintext password provided when a user attempts to log in, in
+order to authenticate. SHA-512 is one of the most secure of a large family of hashing algorithms,
+SHA-2, developed by the US National Security Agency (NSA) and first published in 2001, four
+years before the family's predecessor series of algorithms, SHA-1, was compromised. SHA-512 is
+faster and more secure than its similar algorithm SHA-256, as it uses 64-bit words in contrast
+with SHA-256's 32-bit words. It has thus become very common and respected in the field of
+cybersecurity.
