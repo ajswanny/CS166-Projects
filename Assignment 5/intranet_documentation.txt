@@ -1,0 +1,61 @@
+Business Intranet
+Alexander Swanson
+CS 166 - Cybersecurity Principles
+Professor James Eddy
+October 21, 2017
+
+
+This project implements the following conventions:
+    - Classes follow common naming conventions.
+    - Methods and variables are names using snake-case, fully lowercase.
+
+Moreover, the 'intranet__user' file defines the 'User' class which contains the algorithm for
+password encryption. This algorithm makes use of the user's plaintext password - P - to
+extract the sum of all its contained digits - n - (at least one is required for a valid password),
+sums this value - i - with the length of the password plaintext - k -, elevates n to the power i,
+and concatenates this value - e - to the password string.
+
+That is, the encrypted password, C, is equal to
+
+    P
+
+the plaintext password, concatenated with
+
+    e
+
+which,
+
+    e = n^(i)
+
+where, as described above, n is equal to the sum of all the integers of P, with k as P's length, and
+
+    i = n + k
+
+Thus, the encrypted password is
+
+    C = P + str(e)
+
+                               QED
+
+In order to exemplify the password encryption, we show the pseudocode describing this process:
+
+    P = new_password
+    C = ""
+    e = 0
+    k = len(new_password)
+
+    n = 0
+    m = find_all(int, new_password)
+    for integer in n:
+        n += integer
+
+    i = n + k
+
+    e = power(n, i)
+
+    C = P + str(e)
+
+This creates a new string composed of the original password and its new relatively complex component, with
+e as its encryption key.
+
+                                QED
